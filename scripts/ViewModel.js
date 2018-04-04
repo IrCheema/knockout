@@ -45,7 +45,7 @@ var viewModel = function(name) {
     }
     self.getWeather = function(data) {
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/weather?q=" + data + "&apikey=8b0f370147417ff546aafb792fde9abe",
+            url: "https://api.openweathermap.org/data/2.5/weather?q=" + data + "&apikey=8b0f370147417ff546aafb792fde9abe",
             data: {
 
             },
