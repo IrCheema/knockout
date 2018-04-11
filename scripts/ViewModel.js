@@ -1,7 +1,7 @@
 var viewModel = function(name) {
     var self = this;
     self.id = 1;
-    self.cities = ['Stockholm', 'Gothenburg', 'Malmo'];
+    self.cities = ['Stockholm', 'Gothenburg', 'Orebro'];
     self.name = name;
     self.isNew = function() {
         return self.id == 0;
