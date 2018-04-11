@@ -67,8 +67,25 @@ var viewModel = function(name) {
         });
 
     }
+    self.getGitHUbData = function(owner,repo,file){
+        $.ajax({
+            url:"https://api.github.com/repos/"+owner+"/"+repo+"/contents/images/"+"bg.jpg"+"?ref=gh-pages",
+            data:{},
+            type:"Get",
+            dataType:"json",
+        }).done(function(results){
+            console.log(results)
+            $("<img style='width:200px;height:200px' src='"+results.download_url+"'>").appendTo("#gitContent");
+        }).fail(function(xhr,status,errorThrown){
+            console.log("Error: " + errorThrown);
+            console.log("Status: " + status);
+            console.dir(xhr);
+        }).always(function(){
+            console.log();
+        });
+    }
 
 
 };
-var vieWModelWithParam = new viewModel("User");
+var vieWModelWithParam = new viewModel("Maliha");
 ko.applyBindings(vieWModelWithParam);
