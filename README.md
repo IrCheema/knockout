@@ -1,2 +1,2 @@
 # knockout
-Project for learning KO JS
+Project for learning KO JS. And now fixing issues.
